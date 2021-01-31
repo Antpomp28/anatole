@@ -60,7 +60,7 @@ a {
 
 blockquote {
     padding: 0 1em;
-    border-left: .25em solid var(--blockquote-border-color);
+    border-left: 0.25em solid var(--blockquote-border-color);
     color: var(--blockquote-text-color);
 }
 
@@ -73,8 +73,8 @@ blockquote {
 }
 
 .tag::before {
-    content: "#";
-    opacity: .5;
+    content: '#';
+    opacity: 0.5;
 }
 
 .tag,
@@ -112,7 +112,7 @@ a:active {
 /*animation starts*/
 
 .animated {
-    transition: top .8s linear;
+    transition: top 0.8s linear;
     -webkit-animation-duration: 1s;
     -moz-animation-duration: 1s;
     -ms-animation-duration: 1s;
@@ -279,6 +279,29 @@ a:active {
 
 .sidebar .logo-title .description {
     font-size: 14px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.google-form {
+    width: 640px;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar .logo-title .description {
+        padding-bottom: 50px;
+    }
+    .sidebar .logo-title .description:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #575757;
+        margin-bottom: 30px;
+    }
+    .google-form {
+        width: 100%;
+    }
 }
 
 .sidebar .logo-title .logo {
@@ -381,7 +404,7 @@ a:active {
 }
 
 .post .post-content a:hover {
-    color: #2F69B3;
+    color: #2f69b3;
 }
 
 .post .post-content h3 {
@@ -422,7 +445,7 @@ a:active {
 
 .post .post-footer .meta .info .date {
     margin-right: 10px;
-    margin-left: 5px
+    margin-left: 5px;
 }
 
 .info {
@@ -481,8 +504,7 @@ a:active {
     box-shadow: black;
     border-radius: 0.5em;
     overflow: hidden;
-    transition: box-shadow .3s ease;
-    
+    transition: box-shadow 0.3s ease;
 }
 
 .post .post-thumbnail img {
@@ -563,7 +585,7 @@ a:active {
 }
 
 .footer a {
-    color: #A6A6A6;
+    color: #a6a6a6;
 }
 
 .footer a:hover {
@@ -603,11 +625,11 @@ a:active {
 
 .list-with-title .listing .listing-post .post-time {
     float: right;
-    color: #C5C5C5;
+    color: #c5c5c5;
 }
 
 .list-with-title .listing .listing-post a {
-    color: #8F8F8F;
+    color: #8f8f8f;
 }
 
 .list-with-title .listing .listing-post a:hover {
@@ -624,7 +646,7 @@ a:active {
     width: 32px;
     height: 32px;
     border-radius: 300px;
-    background-color: #3E3E3E;
+    background-color: #3e3e3e;
     margin-right: 5px;
 }
 
@@ -635,7 +657,7 @@ a:active {
 }
 
 .evernote a:hover {
-    color: #ED6243;
+    color: #ed6243;
     padding: 11px;
 }
 
@@ -643,7 +665,7 @@ a:active {
     width: 32px;
     height: 32px;
     border-radius: 300px;
-    background-color: #ED6243;
+    background-color: #ed6243;
     margin-right: 5px;
 }
 
@@ -653,14 +675,14 @@ a:active {
 }
 
 .weibo a:hover {
-    color: #BD4226;
+    color: #bd4226;
 }
 
 .twitter {
     width: 32px;
     height: 32px;
     border-radius: 300px;
-    background-color: #59C0FD;
+    background-color: #59c0fd;
     margin-right: 5px;
 }
 
@@ -670,7 +692,7 @@ a:active {
 }
 
 .twitter a:hover {
-    color: #4B9ECE;
+    color: #4b9ece;
 }
 
 /* about */
@@ -764,22 +786,22 @@ a.btn {
     border-radius: 999em;
 }
 
-[role="back"] {
+[role='back'] {
     padding: 0.5em 1.25em;
     line-height: 1.666em;
 }
 
-[role="home"] {
+[role='home'] {
     padding: 0.5em 1.25em;
     line-height: 1.666em;
 }
 
-[role="navigation"] {
+[role='navigation'] {
     padding: 0.5em 1.25em;
     line-height: 1.666em;
 }
 
-[role="tags"] {
+[role='tags'] {
     padding: 6px 12px;
 }
 
@@ -822,7 +844,7 @@ a.btn {
     padding: 0.5em 1.25em;
     outline: 0;
     color: #fff;
-    background: #3CBD10;
+    background: #3cbd10;
     font-size: 14px;
     text-align: center;
     text-decoration: none;
@@ -851,8 +873,7 @@ a.btn {
     display: none;
 }
 
-@media screen and (max-width: 960px),
-print {
+@media screen and (max-width: 960px), print {
     .sidebar {
         width: 100%;
         position: absolute;
@@ -881,24 +902,25 @@ print {
     }
 
     .content {
-        margin-top: 420px;
+        margin-top: 480px;
         width: 100%;
         z-index: 2;
         position: absolute;
     }
-
     .footer {
-        display: none;
+        display: block;
+        top: 80px;
+        bottom: unset;
+        position: absolute;
     }
-
     .share {
         display: grid;
     }
 
     .page-top .nav {
         background-color: var(--secondary-bg-color);
-        box-shadow: 0 8px 16px rgba(10, 10, 10, .1);
-        padding: .5rem 0;
+        box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+        padding: 0.5rem 0;
         width: 100%;
         display: none;
         margin-top: 0px;
@@ -914,7 +936,7 @@ print {
         flex-grow: 0;
         flex-shrink: 0;
         line-height: 2.5;
-        padding: .5rem .75rem;
+        padding: 0.5rem 0.75rem;
         position: relative;
         text-transform: uppercase;
         text-align: center;
@@ -1009,12 +1031,12 @@ print {
 }
 
 @media print {
-	.page-top {
-		display: none;
-	}
+    .page-top {
+        display: none;
+    }
 }
 
-@media (min-width: 1921px){
+@media (min-width: 1921px) {
     .content {
         padding-right: 25%;
         width: 35%;
@@ -1025,13 +1047,12 @@ print {
     }
 }
 
-
 /* (CONTACT) FORM */
 
 .contact-form {
     margin-top: 30px;
 }
-.form-style{
+.form-style {
     width: 100%;
 }
 .form-style ul {
@@ -1045,9 +1066,9 @@ print {
     min-height: 35px;
 }
 .form-style ul li .field-style {
-    box-sizing: border-box; 
+    box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
     font-size: 14px;
     padding: 8px;
     outline: none;
@@ -1055,9 +1076,9 @@ print {
     border: 1px solid var(--form-border-color);
     color: var(--body-color);
 }
-.form-style ul li    .field-style:focus {
+.form-style ul li .field-style:focus {
     box-shadow: 0 0 5px;
-    border:1px solid;
+    border: 1px solid;
 }
 .form-style ul li .field-split {
     width: 49%;
@@ -1066,10 +1087,10 @@ print {
     width: 100%;
 }
 .form-style ul li input.align-left {
-    float:left;
+    float: left;
 }
 .form-style ul li input.align-right {
-    float:right;
+    float: right;
 }
 .form-style ul li textarea {
     background-color: var(--bg-color);
@@ -1078,8 +1099,8 @@ print {
     width: 100%;
     height: auto;
 }
-.form-style ul li input[type="button"], 
-.form-style ul li input[type="submit"] {
+.form-style ul li input[type='button'],
+.form-style ul li input[type='submit'] {
     background-color: var(--bg-color);
     border: 1px solid var(--form-border-color);
     display: inline-block;
@@ -1088,8 +1109,8 @@ print {
     text-decoration: none;
     width: 100%;
 }
-.form-style ul li input[type="button"]:hover, 
-.form-style ul li input[type="submit"]:hover {
+.form-style ul li input[type='button']:hover,
+.form-style ul li input[type='submit']:hover {
     background-color: var(--bg-color);
     border: 1px solid var(--form-button-hover-border-color);
 }
